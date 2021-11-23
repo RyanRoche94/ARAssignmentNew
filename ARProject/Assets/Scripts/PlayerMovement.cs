@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 6f;
+    public float speed = 20f;
 
     // Start is called before the first frame update
 
@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float verticle = Input.GetAxisRaw("Verticle");
 
-        Vector3 direction = new Vector3(horizontal, 0f, verticle);
+        Vector3 direction = new Vector3(horizontal, 0f, verticle).normalized;
+
+        if(direction.magnitude >= 0.1f)
+        {
+            controller.Move(direction * speed * Time.deltaTime);
+        }
     }
 }
