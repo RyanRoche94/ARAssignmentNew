@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class ElectroScript : MonoBehaviour
 {
+    public Material onmaterial;
+    public Material offmaterial;
     
     public bool isSource;
 
@@ -23,7 +25,8 @@ public class ElectroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        MeshRenderer renderer = GetComponent <MeshRenderer>();
+        Material material = renderer.material;
 
         if (discharged) //If you're discharged...
         {
@@ -38,14 +41,19 @@ public class ElectroScript : MonoBehaviour
         if (charged)
         {
             Debug.Log("Zap");
+            material = onmaterial;
+        }
+        else if (!charged)
+        {
+            material = offmaterial;
         }
         
         Debug.Log(discharged);
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
             pulse();
-        }
+        //}
     }
 
     void pulse() //At the push of a button...
@@ -59,14 +67,17 @@ public class ElectroScript : MonoBehaviour
     public void OnCollisionStay(Collision collision) //To all touching objects...
     {
 
-        if (charged && !discharged) //If this object is charged and not discharged...
+        if (charged) //If this object is charged and not discharged...
         {
             collision.gameObject.SendMessage("Charge"); //Charge the other objects.
-            
-            
 
-            charged = false; //Become not charged.
-            discharged = true; //Become discharged.
+
+
+            if (!isSource)
+            {
+                charged = false; //Become not charged.
+                discharged = true; //Become discharged.
+            }
         }
     }
 
