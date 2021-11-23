@@ -11,8 +11,11 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
-        
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float verticle = Input.GetAxisRaw("Verticle");
+
+        Vector3 direction = new Vector3(horizontal, 0f, verticle);
     }
 }
