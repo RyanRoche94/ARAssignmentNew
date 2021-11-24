@@ -16,6 +16,7 @@ public class ElectroScript : MonoBehaviour
     public bool discharged = false;
 
     public float timer = 0;
+    public float othertimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +44,20 @@ public class ElectroScript : MonoBehaviour
         if (charged == true)
         {
             Debug.Log("Charged");
-            material = onmaterial;
+            GetComponent<MeshRenderer>().material = onmaterial;
+            othertimer += Time.deltaTime; //Start incrementing a timer.
+
+            if (!isSource && othertimer > 2) //If the timer is up...
+            {
+                charged = false; //Become not charged.
+                discharged = true; //Become discharged.
+                othertimer = 0; //Reset the timer.
+                //Debug.Log("AAAAAAAAAAAAAAAAAAA"); //Freak out for attention.
+            }
         }
         else if (!charged)
         {
-            material = offmaterial;
+            GetComponent<MeshRenderer>().material = offmaterial;
             Debug.Log("Uncharged");
         }
         
@@ -65,24 +75,20 @@ public class ElectroScript : MonoBehaviour
         {
             Debug.Log("SourceCharge");
             charged = true;
+            
         }
     }
 
-     void OnCollisionStay(Collision collision) //To all touching objects...
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("TOUCHY");
+
+        //Debug.Log("TOUCHY");
 
         if (charged == true) //If this object is charged and not discharged...
         {
-            collision.gameObject.SendMessage("Charge"); //Charge the other objects.
-            Debug.Log("IF CHARGED TRUE");
+            other.SendMessage("Charge", SendMessageOptions.RequireReceiver); //Charge the other objects. Doesn't try and send to the floor.
+            //Debug.Log("IF CHARGED TRUE");
 
-
-            if (!isSource)
-            {
-                charged = false; //Become not charged.
-                discharged = true; //Become discharged.
-            }
         }
     }
 
