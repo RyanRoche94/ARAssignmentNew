@@ -62,13 +62,19 @@ public class NewPlayerMove : MonoBehaviour
     private void Rotation()
     {
         Vector3 targetDirection = Vector3.zero;
+       
         targetDirection = cameraObject.forward * verticleInput;
         targetDirection = targetDirection + cameraObject.right * horizontalInput;
         targetDirection.Normalize();
 
         targetDirection.y = 0;
 
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        if (targetDirection == Vector3.zero)
+        {
+            targetDirection = transform.forward;
+        }
+
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
         transform.rotation = playerRotation;
@@ -76,6 +82,7 @@ public class NewPlayerMove : MonoBehaviour
 
     public void HandleMovements()
     {
+        Movement();
         MovementInput();
         Rotation();
     }
