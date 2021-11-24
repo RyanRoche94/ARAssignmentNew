@@ -30,22 +30,25 @@ public class ElectroScript : MonoBehaviour
 
         if (discharged) //If you're discharged...
         {
+            Debug.Log("Discharged If");
             timer += Time.deltaTime; //Start a timer.
             if (timer >= 3) //After 3 seconds...
             {
+                Debug.Log("TimerUp");
                 discharged = false; //Stop being discharged.
                 timer = 0; //And reset the timer.
             }
         }
 
-        if (charged)
+        if (charged == true)
         {
-            Debug.Log("Zap");
+            Debug.Log("Charged");
             material = onmaterial;
         }
         else if (!charged)
         {
             material = offmaterial;
+            Debug.Log("Uncharged");
         }
         
         Debug.Log(discharged);
@@ -60,17 +63,19 @@ public class ElectroScript : MonoBehaviour
     {
         if (isSource) //If this is a source become charged.
         {
+            Debug.Log("SourceCharge");
             charged = true;
         }
     }
 
-    public void OnCollisionStay(Collision collision) //To all touching objects...
+     void OnCollisionStay(Collision collision) //To all touching objects...
     {
+        Debug.Log("TOUCHY");
 
-        if (charged) //If this object is charged and not discharged...
+        if (charged == true) //If this object is charged and not discharged...
         {
             collision.gameObject.SendMessage("Charge"); //Charge the other objects.
-
+            Debug.Log("IF CHARGED TRUE");
 
 
             if (!isSource)
@@ -85,6 +90,7 @@ public class ElectroScript : MonoBehaviour
     {
         if (!discharged) //If not discharged...
         {
+            Debug.Log("NOT DISCHARGED");
             charged = true; //Become charged.
         }
     }
