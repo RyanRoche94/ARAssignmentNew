@@ -116,6 +116,7 @@ MonoBehaviour:
   charged: 0
   discharged: 0
   timer: 0
+  othertimer: 0
 --- !u!54 &345290550947814664
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,7 +125,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345290550947814678}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
