@@ -34,7 +34,7 @@ public class ElectroScript : MonoBehaviour
         {
             Debug.Log("Discharged If");
             timer += Time.deltaTime; //Start a timer.
-            if (timer >= 3) //After 3 seconds...
+            if (timer >= 0.5) //After 3 seconds...
             {
                 Debug.Log("TimerUp");
                 discharged = false; //Stop being discharged.
