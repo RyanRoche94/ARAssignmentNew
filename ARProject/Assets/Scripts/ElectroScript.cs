@@ -8,6 +8,7 @@ public class ElectroScript : MonoBehaviour
 {
     public Material onmaterial;
     public Material offmaterial;
+    public GameObject chargeparticle;
     
     public bool isSource;
 
@@ -44,8 +45,10 @@ public class ElectroScript : MonoBehaviour
         if (charged == true)
         {
             Debug.Log("Charged");
-            GetComponent<MeshRenderer>().material = onmaterial;
+            GetComponent<MeshRenderer>().material = onmaterial; //Change material.
+            chargeparticle.SetActive(true); //Activate a particle system.
             othertimer += Time.deltaTime; //Start incrementing a timer.
+            
 
             if (!isSource && othertimer > 2) //If the timer is up...
             {
@@ -57,7 +60,8 @@ public class ElectroScript : MonoBehaviour
         }
         else if (!charged)
         {
-            GetComponent<MeshRenderer>().material = offmaterial;
+            GetComponent<MeshRenderer>().material = offmaterial; //Change material.
+            chargeparticle.SetActive(false); //Deactivate a particle system.
             Debug.Log("Uncharged");
         }
         
@@ -65,7 +69,7 @@ public class ElectroScript : MonoBehaviour
 
         //if (Input.GetKeyDown(KeyCode.F))
         //{
-            pulse();
+            pulse(); //Run the pulse function. Might be bound to a key in the future.
         //}
     }
 
@@ -73,7 +77,7 @@ public class ElectroScript : MonoBehaviour
     {
         if (isSource) //If this is a source become charged.
         {
-            Debug.Log("SourceCharge");
+            //Debug.Log("SourceCharge");
             charged = true;
             
         }
