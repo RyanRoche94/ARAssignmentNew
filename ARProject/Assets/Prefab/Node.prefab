@@ -111,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dffff5a6bf2da34bb43d8cea3ee3255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onmaterial: {fileID: 2100000, guid: 294daa83634173144b285091be801b41, type: 2}
-  offmaterial: {fileID: 2100000, guid: eb13e7e7e42dd9e43a19ae89cf9a15a4, type: 2}
+  onmaterial: {fileID: 2100000, guid: 9b1a7e7640d2b6c4cbaec6f71d0512c5, type: 2}
+  offmaterial: {fileID: 2100000, guid: 15b5906d1961bbd48a4146ce5975dd2d, type: 2}
   chargeparticle: {fileID: 806768005062401223}
   isSource: 0
   charged: 0
