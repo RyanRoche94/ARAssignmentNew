@@ -16,8 +16,8 @@ public class ElectroScript : MonoBehaviour
 
     public bool discharged = false;
 
-    public float timer = 0;
-    public float othertimer = 0;
+    public float chargetimer = 0;
+    public float dischargetimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,29 +32,29 @@ public class ElectroScript : MonoBehaviour
 
         if (discharged) //If you're discharged...
         {
-            Debug.Log("Discharged If");
-            timer += Time.deltaTime; //Start a timer.
-            if (timer >= 0.5) //After 3 seconds...
+            //Debug.Log("Discharged If");
+            chargetimer += Time.deltaTime; //Start a timer.
+            if (chargetimer >= 0.5) //After 3 seconds...
             {
-                Debug.Log("TimerUp");
+                //Debug.Log("TimerUp");
                 discharged = false; //Stop being discharged.
-                timer = 0; //And reset the timer.
+                chargetimer = 0; //And reset the timer.
             }
         }
 
         if (charged == true)
         {
-            Debug.Log("Charged");
+            //Debug.Log("Charged");
             GetComponent<MeshRenderer>().material = onmaterial; //Change material.
             chargeparticle.SetActive(true); //Activate a particle system.
-            othertimer += Time.deltaTime; //Start incrementing a timer.
+            dischargetimer += Time.deltaTime; //Start incrementing a timer.
             
 
-            if (!isSource && othertimer > 2) //If the timer is up...
+            if (!isSource && dischargetimer > 2) //If the timer is up...
             {
                 charged = false; //Become not charged.
                 discharged = true; //Become discharged.
-                othertimer = 0; //Reset the timer.
+                dischargetimer = 0; //Reset the timer.
                 //Debug.Log("AAAAAAAAAAAAAAAAAAA"); //Freak out for attention.
             }
         }
@@ -62,10 +62,10 @@ public class ElectroScript : MonoBehaviour
         {
             GetComponent<MeshRenderer>().material = offmaterial; //Change material.
             chargeparticle.SetActive(false); //Deactivate a particle system.
-            Debug.Log("Uncharged");
+            //Debug.Log("Uncharged");
         }
         
-        Debug.Log(discharged);
+        //Debug.Log(discharged);
 
         //if (Input.GetKeyDown(KeyCode.F))
         //{
@@ -100,7 +100,7 @@ public class ElectroScript : MonoBehaviour
     {
         if (!discharged) //If not discharged...
         {
-            Debug.Log("NOT DISCHARGED");
+            //Debug.Log("NOT DISCHARGED");
             charged = true; //Become charged.
         }
     }
