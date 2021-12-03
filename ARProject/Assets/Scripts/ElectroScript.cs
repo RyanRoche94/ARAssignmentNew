@@ -16,8 +16,8 @@ public class ElectroScript : MonoBehaviour
 
     public bool discharged = false;
 
-    public float chargetimer = 0;
-    public float dischargetimer = 0;
+    private float chargetimer = 0;
+    private float dischargetimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +34,7 @@ public class ElectroScript : MonoBehaviour
         {
             //Debug.Log("Discharged If");
             chargetimer += Time.deltaTime; //Start a timer.
-            if (chargetimer >= 0.5) //After 3 seconds...
+            if (chargetimer >= 0.5) //After 0.5 seconds...
             {
                 //Debug.Log("TimerUp");
                 discharged = false; //Stop being discharged.
