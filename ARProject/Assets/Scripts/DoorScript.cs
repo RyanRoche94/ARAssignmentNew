@@ -10,6 +10,8 @@ public class DoorScript : MonoBehaviour
     private bool timestart;
 
     private float timer;
+
+    public GameObject mychild;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class DoorScript : MonoBehaviour
 
         if (timer >= 2)
         {
-            gameObject.transform.position += new Vector3(0, -1000, 0); //If the timer is up, shoot back down
+            mychild.SetActive(true); //If the timer is up, shoot back down
             timer = 0;
             timestart = false; //Stop and reset the timer.
         }
@@ -33,7 +35,7 @@ public class DoorScript : MonoBehaviour
 
     public void Charge()
     {
-        gameObject.transform.position += new Vector3(0, 1000, 0); //Shoot up (to stay active and still be out of the way)
+        mychild.SetActive(false);
         timestart = true; //Start a timer.
     }
 }
