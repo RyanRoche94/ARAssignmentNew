@@ -126,9 +126,20 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Stick",
-                    "id": "41083e78-16ef-4d2d-a65a-5ca8bb737357",
-                    "path": "2DVector(mode=2)",
+                    "name": "",
+                    "id": "767357c3-28f2-4010-af54-b56e96bfd3b2",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Vector2D",
+                    "id": "43da1401-c41b-4bd4-93f5-48a7ebb82c38",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -138,8 +149,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "1c23dcf3-a7d6-4e71-ab5c-2d7b8bf5c3d8",
-                    "path": "<AndroidJoystick>/stick/up",
+                    "id": "b55e69b5-134e-4158-8bec-c7ae73c94b4f",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -149,8 +160,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "73891371-ded4-405f-8085-d6b435ff1407",
-                    "path": "<AndroidJoystick>/stick/down",
+                    "id": "f3bc6b94-3aeb-4a51-8109-15df3b6968ba",
+                    "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -160,8 +171,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "604ff4b9-1d2e-4d87-952c-00d6771ca8bd",
-                    "path": "<AndroidJoystick>/stick/left",
+                    "id": "04d95c39-a2c3-458c-833f-9e272a397a1e",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -171,8 +182,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "adbddc2a-f5bf-47d4-8819-0daee63e6234",
-                    "path": "<AndroidJoystick>/stick/right",
+                    "id": "abb89661-84c9-4b15-99e7-c0d510c80b59",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

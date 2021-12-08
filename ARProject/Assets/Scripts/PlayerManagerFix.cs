@@ -15,6 +15,7 @@ public class PlayerManagerFix : MonoBehaviour
     private void Update()
     {
         newPlayerMove.HandleInputs();
+       
     }
     private void FixedUpdate()
     {
