@@ -9,7 +9,7 @@ public class NewPlayerMove : MonoBehaviour
     public Vector2 movementInput;
 
     Vector3 moveDirection;
-    Transform cameraObject;
+    public Transform cameraObject;
 
     public float verticleInput;
     public float horizontalInput;
@@ -37,7 +37,7 @@ public class NewPlayerMove : MonoBehaviour
     public void Awake ()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        cameraObject = Camera.main.transform;
+        //cameraObject = Camera.main.transform;
     }
     
 
