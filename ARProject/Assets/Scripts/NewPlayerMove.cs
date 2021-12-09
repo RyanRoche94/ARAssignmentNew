@@ -43,7 +43,7 @@ public class NewPlayerMove : MonoBehaviour
 
     public void Movement()
     {
-        moveDirection = cameraObject.forward * verticleInput;
+        moveDirection = (cameraObject.forward * verticleInput) + (cameraObject.up * verticleInput);
         moveDirection = moveDirection + cameraObject.right * horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
