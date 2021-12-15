@@ -1275,7 +1275,7 @@ PrefabInstance:
       objectReference: {fileID: 1590731091}
     - target: {fileID: 21399411, guid: fa098fd54847ab844b372d5d31217398, type: 3}
       propertyPath: movementSpeed
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 21399411, guid: fa098fd54847ab844b372d5d31217398, type: 3}
       propertyPath: rotationSpeed
@@ -1380,6 +1380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5656203580432733286, guid: fa098fd54847ab844b372d5d31217398,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5656203580773607104, guid: fa098fd54847ab844b372d5d31217398,
         type: 3}
@@ -2087,7 +2092,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1399407167}
+  - {fileID: 572919103}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5711,6 +5716,35 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!21 &572919103
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'AstronautMaterial
+
+    20640'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!43 &598327623
 Mesh:
   m_ObjectHideFlags: 0
@@ -8067,7 +8101,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2613950
+  m_Name: pb_Mesh-1770
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8375,7 +8409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056682124}
   m_LocalRotation: {x: -0, y: -0, z: -0.7085308, w: 0.70567995}
-  m_LocalPosition: {x: 0.2224, y: 0.0818, z: 0.193}
+  m_LocalPosition: {x: 0.1849, y: 0.06, z: 0.193}
   m_LocalScale: {x: 0.11472601, y: 0.11472601, z: 0.090753995}
   m_Children: []
   m_Father: {fileID: 2112579537}
@@ -13025,35 +13059,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91dd94403d459824d8cf52a1af60ee74, type: 3}
---- !u!21 &1399407167
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'AstronautMaterial
-
-    102434'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1424335414
 GameObject:
   m_ObjectHideFlags: 0
@@ -18476,7 +18481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2613948
+  m_Name: pb_Mesh-1758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
