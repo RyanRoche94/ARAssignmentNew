@@ -9,6 +9,7 @@ public class PlayerPickup : MonoBehaviour
     private bool holding = false;
     public GameObject grabpoint;
     public GameObject droppoint;
+    public GameObject dropImage;
     private GameObject readygrab;
 
     PlayerControler playercontrols;
@@ -21,6 +22,11 @@ public class PlayerPickup : MonoBehaviour
         }
 
         playercontrols.Enable();
+    }
+
+    private void Start()
+    {
+        dropImage.SetActive(false);
     }
 
     private void OnDisable()
@@ -37,22 +43,20 @@ public class PlayerPickup : MonoBehaviour
 
     }
 
-    public void Awake()
-    {
-       
-    }
 
     public void Grab()
     {
         if (!holding && readygrab != null) //If you're not holding anything and there's something to hold...
         {
             holding = true; //Become holding that thing.
+            dropImage.SetActive(true);
         }
         else if (holding) //If you're holding something...
         {
             holding = false; //Stop holding.
             readygrab.transform.position =
                 droppoint.transform.position; //Put it down.
+            dropImage.SetActive(false);
         }
     }
 
