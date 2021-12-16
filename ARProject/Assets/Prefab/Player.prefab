@@ -298,6 +298,8 @@ GameObject:
   - component: {fileID: 5656203580432733283}
   - component: {fileID: 21399407}
   - component: {fileID: 21399411}
+  - component: {fileID: 689532481913465997}
+  - component: {fileID: 3656660016317286882}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -382,10 +384,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementInput: {x: 0, y: 0}
+  cameraObject: {fileID: 0}
   verticleInput: 0
   horizontalInput: 0
   movementSpeed: 7
   rotationSpeed: 15
+--- !u!114 &689532481913465997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656203580432733286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 730655038c139464e9ee2121d65e1807,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f47eefb6-4876-4b8e-a7d5-60f71ae2991f
+    m_ActionName: Player Movement/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3aad76b-be9e-409a-8e6c-ae2439ea73a6
+    m_ActionName: Action/Grab[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Action
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &3656660016317286882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656203580432733286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eafa5235ba464149911dc0fd7a97d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5656203580505047443
 GameObject:
   m_ObjectHideFlags: 0

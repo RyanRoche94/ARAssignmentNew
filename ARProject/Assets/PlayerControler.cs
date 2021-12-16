@@ -205,6 +205,33 @@ public class @PlayerControler : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Action"",
+            ""id"": ""27efa5cd-f5e1-4f03-9660-b91a32563f72"",
+            ""actions"": [
+                {
+                    ""name"": ""Grab"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f3aad76b-be9e-409a-8e6c-ae2439ea73a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""344c4419-aa14-46bc-82bd-cba7d1d19ba3"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -212,6 +239,9 @@ public class @PlayerControler : IInputActionCollection, IDisposable
         // Player Movement
         m_PlayerMovement = asset.FindActionMap("Player Movement", throwIfNotFound: true);
         m_PlayerMovement_Movement = m_PlayerMovement.FindAction("Movement", throwIfNotFound: true);
+        // Action
+        m_Action = asset.FindActionMap("Action", throwIfNotFound: true);
+        m_Action_Grab = m_Action.FindAction("Grab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -290,8 +320,45 @@ public class @PlayerControler : IInputActionCollection, IDisposable
         }
     }
     public PlayerMovementActions @PlayerMovement => new PlayerMovementActions(this);
+
+    // Action
+    private readonly InputActionMap m_Action;
+    private IActionActions m_ActionActionsCallbackInterface;
+    private readonly InputAction m_Action_Grab;
+    public struct ActionActions
+    {
+        private @PlayerControler m_Wrapper;
+        public ActionActions(@PlayerControler wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Grab => m_Wrapper.m_Action_Grab;
+        public InputActionMap Get() { return m_Wrapper.m_Action; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ActionActions set) { return set.Get(); }
+        public void SetCallbacks(IActionActions instance)
+        {
+            if (m_Wrapper.m_ActionActionsCallbackInterface != null)
+            {
+                @Grab.started -= m_Wrapper.m_ActionActionsCallbackInterface.OnGrab;
+                @Grab.performed -= m_Wrapper.m_ActionActionsCallbackInterface.OnGrab;
+                @Grab.canceled -= m_Wrapper.m_ActionActionsCallbackInterface.OnGrab;
+            }
+            m_Wrapper.m_ActionActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Grab.started += instance.OnGrab;
+                @Grab.performed += instance.OnGrab;
+                @Grab.canceled += instance.OnGrab;
+            }
+        }
+    }
+    public ActionActions @Action => new ActionActions(this);
     public interface IPlayerMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
+    }
+    public interface IActionActions
+    {
+        void OnGrab(InputAction.CallbackContext context);
     }
 }

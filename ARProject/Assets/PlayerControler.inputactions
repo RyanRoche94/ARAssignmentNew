@@ -192,6 +192,33 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Action",
+            "id": "27efa5cd-f5e1-4f03-9660-b91a32563f72",
+            "actions": [
+                {
+                    "name": "Grab",
+                    "type": "PassThrough",
+                    "id": "f3aad76b-be9e-409a-8e6c-ae2439ea73a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "344c4419-aa14-46bc-82bd-cba7d1d19ba3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
