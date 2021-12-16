@@ -212,7 +212,7 @@ public class @PlayerControler : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Grab"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""f3aad76b-be9e-409a-8e6c-ae2439ea73a6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
