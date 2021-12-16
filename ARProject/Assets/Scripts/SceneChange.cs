@@ -18,7 +18,7 @@ public class SceneChange : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (SceneManager.sceneCount +1 >= nextSceneIndex)
+            if (SceneManager.sceneCount +2 >= nextSceneIndex)
             {
                 SceneManager.LoadScene(nextSceneIndex);
             }
