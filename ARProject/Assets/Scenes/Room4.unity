@@ -306,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 810694277}
     - target: {fileID: 21399411, guid: fa098fd54847ab844b372d5d31217398, type: 3}
       propertyPath: movementSpeed
-      value: 1
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 5656203580432733281, guid: fa098fd54847ab844b372d5d31217398,
         type: 3}
@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 6119857242724837603, guid: fa098fd54847ab844b372d5d31217398,
         type: 3}
       propertyPath: gravityForce
-      value: 15
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6119857242724837603, guid: fa098fd54847ab844b372d5d31217398,
         type: 3}
@@ -421,7 +421,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2250
+  m_Name: pb_Mesh-3157252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -818,7 +818,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2238
+  m_Name: pb_Mesh-3157240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1070,7 +1070,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1046858924}
+  - {fileID: 1839783203}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1262,7 +1262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2226
+  m_Name: pb_Mesh-3157228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1438,7 +1438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2282
+  m_Name: pb_Mesh-3157284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1689,7 +1689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2424
+  m_Name: pb_Mesh-3157424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1853,7 +1853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2052
+  m_Name: pb_Mesh-3157056
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2011,35 +2011,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!21 &1046858924
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'AstronautMaterial
-
-    -181650'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1128242695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2173,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2270
+  m_Name: pb_Mesh-3157272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2422,7 +2393,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2214
+  m_Name: pb_Mesh-3157216
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2630,7 +2601,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2040
+  m_Name: pb_Mesh-3157044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2788,13 +2759,42 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!21 &1839783203
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'AstronautMaterial
+
+    37322'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 77fb44a366db5cb41b8c06649271f8e6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!43 &2035218971
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2436
+  m_Name: pb_Mesh-3157436
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
