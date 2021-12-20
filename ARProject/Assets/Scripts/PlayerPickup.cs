@@ -26,7 +26,7 @@ public class PlayerPickup : MonoBehaviour
 
     private void Start()
     {
-        dropImage.SetActive(false);
+        dropImage.SetActive(false); //Don't have the drop image be visible
     }
 
     private void OnDisable()
@@ -38,7 +38,7 @@ public class PlayerPickup : MonoBehaviour
     {
         if (holding)
         {
-            readygrab.transform.position = grabpoint.transform.position;
+            readygrab.transform.position = grabpoint.transform.position; //Move the held object with the player.
         }
 
     }
@@ -70,9 +70,9 @@ public class PlayerPickup : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Held")
+        if (other.tag == "Held") //If it (was) holdable...
         {
-            readygrab = null;
+            readygrab = null; //Stop being ready to hold things.
         }
     }
 }

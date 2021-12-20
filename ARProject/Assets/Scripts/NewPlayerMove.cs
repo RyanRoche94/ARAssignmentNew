@@ -9,7 +9,7 @@ public class NewPlayerMove : MonoBehaviour
     public Vector2 movementInput;
 
     Vector3 moveDirection;
-    public Transform cameraObject;
+    
 
     public float verticleInput;
     public float horizontalInput;
@@ -43,12 +43,10 @@ public class NewPlayerMove : MonoBehaviour
 
     public void Movement()
     {
-        moveDirection = (cameraObject.forward * verticleInput) + (cameraObject.up * verticleInput);
-        moveDirection = moveDirection + cameraObject.right * horizontalInput;
+        moveDirection = new Vector3(horizontalInput, 0, verticleInput);
         moveDirection.Normalize();
         moveDirection.y = 0;
         moveDirection = moveDirection * movementSpeed;
-
         Vector3 movementVelocity = moveDirection;
         playerRigidbody.velocity = movementVelocity;
     }
@@ -59,32 +57,12 @@ public class NewPlayerMove : MonoBehaviour
         horizontalInput = movementInput.x;
     }
 
-    private void Rotation()
-    {
-        Vector3 targetDirection = Vector3.zero;
-       
-        targetDirection = cameraObject.forward * verticleInput;
-        targetDirection = targetDirection + cameraObject.right * horizontalInput;
-        targetDirection.Normalize();
-
-        targetDirection.y = 0;
-
-        if (targetDirection == Vector3.zero)
-        {
-            targetDirection = transform.forward;
-        }
-
-            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-        Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        transform.rotation = playerRotation;
-    }
+    
 
     public void HandleMovements()
     {
         Movement();
         MovementInput();
-        Rotation();
     }
     public void HandleInputs()
     {

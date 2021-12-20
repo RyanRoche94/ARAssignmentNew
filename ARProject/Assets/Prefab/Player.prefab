@@ -438,8 +438,6 @@ GameObject:
   - component: {fileID: 5656203580432733281}
   - component: {fileID: 5656203580432733282}
   - component: {fileID: 5656203580432733283}
-  - component: {fileID: 21399407}
-  - component: {fileID: 21399411}
   - component: {fileID: 689532481913465997}
   - component: {fileID: 3656660016317286882}
   - component: {fileID: 6119857242724837603}
@@ -507,36 +505,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &21399407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5656203580432733286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a31bd681bc1e8e45b1ac661b5675231, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &21399411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5656203580432733286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778b9e409cd5cfa4e9cff526c944136f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementInput: {x: 0, y: 0}
-  cameraObject: {fileID: 0}
-  verticleInput: 0
-  horizontalInput: 0
-  movementSpeed: 0.55
-  rotationSpeed: 5
 --- !u!114 &689532481913465997
 MonoBehaviour:
   m_ObjectHideFlags: 0
