@@ -13,7 +13,7 @@ public class MoveToTouch : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Moved && touch.phase != TouchPhase.Stationary)
             {
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, touch.position.z));
+                Vector3 touchPosition = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0.0f));
                 transform.position = touchPosition;
             }
         }
