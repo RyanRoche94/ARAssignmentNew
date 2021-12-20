@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class SceneChange : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class SceneChange : MonoBehaviour
         {
             
                 SceneManager.LoadScene(nextSceneIndex);
-            
+                
+
         }
     }
 }

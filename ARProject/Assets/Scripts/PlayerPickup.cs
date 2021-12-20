@@ -12,27 +12,13 @@ public class PlayerPickup : MonoBehaviour
     public GameObject dropImage;
     private GameObject readygrab;
 
-    PlayerControler playercontrols;
-    private void OnEnable()
-    {
-        if (playercontrols == null)
-        {
-            playercontrols = new PlayerControler();
-            playercontrols.Action.Grab.performed += i => Grab();
-        }
-
-        playercontrols.Enable();
-    }
+    
 
     private void Start()
     {
         dropImage.SetActive(false); //Don't have the drop image be visible
     }
-
-    private void OnDisable()
-    {
-        playercontrols.Disable();
-    }
+    
 
     public void Update()
     {
